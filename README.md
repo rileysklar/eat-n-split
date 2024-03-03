@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# 🍕 Eat-N-Split
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Eat-N-Split is a React-based application designed to make dining out with friends easier by calculating how to split the bill fairly. Whether you're sharing a pizza or a gourmet meal, our app takes into account what each person ordered and suggests how to divide the cost efficiently, including tax and tip.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- **React**: A JavaScript library for building user interfaces. We use React for its component-based architecture, making our app scalable and maintainable.
+- **Node.js**: Our development environment. Node.js allows us to use JavaScript on the server-side, providing the necessary tools to run and manage our React application.
+- **State Management**: We use React's built-in state management to handle user inputs and calculations. This keeps the app responsive and ensures that the UI always reflects the latest data.
+- **CSS**: For styling, we keep things simple and responsive with CSS, making sure Eat-N-Split looks good on any device.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To get a local copy up and running, follow these simple steps.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js: Ensure you have Node.js installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repo
+   ```sh
+   git clone https://github.com/rileysklar/eat-n-split.git
+   ```
+2. Navigate to the project directory
+   ```sh
+   cd eat-n-split
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Start the development server
+   ```sh
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will reload when you make changes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Enter Orders**: Start by entering each person's order into the app. You can include as many items as needed, along with their prices.
+2. **Calculate Split**: With all orders entered, hit the 'Calculate' button. Eat-N-Split will distribute the total cost fairly, accounting for what each person ordered.
+3. **Adjust for Tax and Tip**: Don't forget to include the tax and tip! Our app provides fields for these so you can incorporate them into the total bill.
 
-### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contact
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Portfolio: [rileysklar.io](https://rileysklar.io)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project Link: [https://github.com/rileysklar/eat-n-split](https://github.com/rileysklar/eat-n-split)
