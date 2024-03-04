@@ -1,8 +1,8 @@
 :root {
-  --color-lightest: #fff4e6;
-  --color-light: #ffe7cc;
-  --color-medium: #ffa94d;
-  --color-dark: #ff922b;
+  --color-lightest: #eaffe6;
+  --color-light: #68c610;
+  --color-medium: #caf7a5;
+  --color-dark: #b3e58a;
 }
 
 * {
@@ -25,13 +25,17 @@ body {
   align-items: center;
   justify-content: center;
   padding-bottom: 0.5em;
-  /* background-image: url(../public/texture.png); */
+  text-wrap: pretty;
+  background-image: url(../public/blur.svg);
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .header {
   font-size: 3em;
   padding: 0.5em;
-  color: #ffe8cc;
+  color: #ffffff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.28);
 }
 
 .app {
@@ -40,19 +44,27 @@ body {
   column-gap: 4rem;
   padding: 2em;
   align-items: start;
-  background-color: #fffdfd;
-  border-radius: 2em;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  gap: 20px;
 }
 
 .button {
   background-color: var(--color-medium);
-  color: #595959;
-  padding: 1.2rem 1.6rem;
+  color: #272727;
+  padding: 1.1rem 1.4rem;
   border: none;
   border-radius: 7px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.68);
 }
 
 .button:hover {
@@ -123,8 +135,7 @@ form {
   display: grid;
   align-items: center;
   gap: 1.2rem;
-
-  background-color: var(--color-lightest);
+  background-color: #ffffff41;
   border-radius: 7px;
 }
 
@@ -132,10 +143,22 @@ form {
   grid-template-columns: 1fr 1.5fr;
   margin-bottom: 1.6rem;
   padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
 }
 .form-split-bill {
   grid-template-columns: 1fr 12rem;
-  padding: 3.2rem 4rem;
+  padding: 3.2rem 2rem;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
 }
 
 label {
@@ -144,7 +167,6 @@ label {
 
 label::first-letter {
   display: inline-block;
-  margin-right: 4px;
   font-size: 1.8rem;
 }
 
@@ -155,15 +177,29 @@ select {
   font-size: 1.5rem;
   padding: 0.7rem;
   text-align: center;
-  border: 1px solid var(--color-light);
+  border: 2px solid #ffffff66;
   border-radius: 4px;
   transition: 0.3s;
+}
+input:disabled {
+  background-color: #ffffffa5;
+}
+
+input:invalid {
+  border: 2px dashed rgba(255, 0, 0, 0.221);
+}
+
+input:invalid:required {
+}
+
+input:valid {
+  border: 2px solid rgba(107, 204, 245, 0.718);
 }
 
 input:focus,
 select:focus {
   outline: none;
-  border: 1px solid var(--color-dark);
+  border: 2px solid var(--color-dark);
 }
 
 form .button {
@@ -181,11 +217,12 @@ form h2 {
 
 @media only screen and (max-width: 768px) {
   body {
+    padding-bottom: 0;
   }
 
   .app {
     grid-template-columns: 1fr;
-    padding: 1em;
+    padding: 1em 1em 3em 1em;
     column-gap: 2rem;
     overflow: scroll;
     border-radius: 2em 2em 0 0;
