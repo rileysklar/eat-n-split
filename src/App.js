@@ -54,7 +54,7 @@ export default function App() {
 }
 
 function Header() {
-  return <h1 className="header">🍕 Eat-N-Split</h1>;
+  return <h1 className="header">🧾 SplitTab</h1>;
 }
 
 function FriendsList() {
@@ -141,8 +141,8 @@ function FormAddFriend() {
 function FormSplitBill() {
   return (
     <form className="form-split-bill">
-      <h2>Split a bill with X</h2>
-      <label>💰 Bill Value </label>
+      <h2>Split a tab with X</h2>
+      <label>💰 Tab Value </label>
       <input type="text" required />
 
       <label>🫵 Your Expense</label>
@@ -151,13 +151,13 @@ function FormSplitBill() {
       <label>🫴 X's Expense</label>
       <input type="text" disabled />
 
-      <label>❓ Who is paying the bill </label>
+      <label>❓ Who is paying the tab </label>
       <select>
         <option value="user">You</option>
         <option value="friend">X</option>
       </select>
 
-      <Button>Split Bill</Button>
+      <Button>Split Tab</Button>
     </form>
   );
 }

@@ -1,13 +1,13 @@
-# 🍕 Eat-N-Split
+# 🧾 SplitTab
 
-Eat-N-Split is a React-based application designed to make dining out with friends easier by calculating how to split the bill fairly. Whether you're sharing a pizza or a gourmet meal, our app takes into account what each person ordered and suggests how to divide the cost efficiently, including tax and tip.
+🧾 SplitTab is a React-based application designed to make dining out with friends easier by calculating how to split the bill fairly. Whether you're sharing a pizza or a gourmet meal, our app takes into account what each person ordered and suggests how to divide the cost efficiently, including tax and tip.
 
 ## Tech Stack
 
 - **React**: A JavaScript library for building user interfaces. We use React for its component-based architecture, making our app scalable and maintainable.
 - **Node.js**: Our development environment. Node.js allows us to use JavaScript on the server-side, providing the necessary tools to run and manage our React application.
 - **State Management**: We use React's built-in state management to handle user inputs and calculations. This keeps the app responsive and ensures that the UI always reflects the latest data.
-- **CSS**: For styling, we keep things simple and responsive with CSS, making sure Eat-N-Split looks good on any device.
+- **CSS**: For styling, we keep things simple and responsive with CSS, making sure 🧾 SplitTab looks good on any device.
 
 ## Getting Started
 
