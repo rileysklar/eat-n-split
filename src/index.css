@@ -28,7 +28,7 @@ body {
   text-wrap: pretty;
   background-image: url(../public/blur.svg);
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: center;
 }
 
 .header {
@@ -55,7 +55,7 @@ body {
   column-gap: 4rem;
   padding: 2em;
   align-items: start;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
