@@ -29,6 +29,14 @@ function Button({ children, onClick }) {
   );
 }
 
+function DeleteButton({ children, onClick }) {
+  return (
+    <button className="button delete" onClick={onClick}>
+      {children}
+    </button>
+  );
+}
+
 export default function App() {
   const [showAddFriend, setShowAddFriend] = useState(false);
   const [friends, setFriends] = useState(initialFriends);
@@ -40,12 +48,16 @@ export default function App() {
 
   function handleAddFriend(friend) {
     setFriends((friends) => [...friends, friend]);
-    setShowAddFriend(false);
+  }
+
+  function handleDeleteFriend(id) {
+    setFriends((friends) => friends.filter((friend) => friend.id !== id));
   }
 
   function handleSelection(friend) {
     // setSelectedFriend(friend);
     setSelectedFriend((cur) => (cur?.id === friend.id ? null : friend));
+    setShowAddFriend(false);
   }
 
   return (
@@ -57,6 +69,7 @@ export default function App() {
             friends={friends}
             selectedFriend={selectedFriend}
             onSelection={handleSelection}
+            onDeleteFriend={handleDeleteFriend}
           />
           {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
           <Button onClick={handleShowAddFriend}>
@@ -70,10 +83,17 @@ export default function App() {
 }
 
 function Header() {
-  return <h1 className="header">🧾 SplitTab</h1>;
+  return (
+    <nav className="logo-bar">
+      <div className="logo-container">
+        <img src="/money.svg" alt="Logo" />
+        <h1 className="header">SplitTab</h1>
+      </div>
+    </nav>
+  );
 }
 
-function FriendsList({ friends, onSelection, selectedFriend }) {
+function FriendsList({ friends, onSelection, selectedFriend, onDeleteFriend }) {
   return (
     <ul>
       {friends.map((friend) => (
@@ -82,13 +102,14 @@ function FriendsList({ friends, onSelection, selectedFriend }) {
           key={friend.id}
           selectedFriend={selectedFriend}
           onSelection={onSelection}
+          onDeleteFriend={() => onDeleteFriend(friend.id)}
         />
       ))}
     </ul>
   );
 }
 
-function Friend({ friend, onSelection, selectedFriend }) {
+function Friend({ friend, onSelection, selectedFriend, onDeleteFriend }) {
   const isSelected = selectedFriend?.id === friend.id;
 
   return (
@@ -109,6 +130,7 @@ function Friend({ friend, onSelection, selectedFriend }) {
       <Button onClick={() => onSelection(friend)}>
         {isSelected ? "Close" : "Select"}
       </Button>
+      <DeleteButton onClick={() => onDeleteFriend()}>Delete</DeleteButton>
     </li>
   );
 }
